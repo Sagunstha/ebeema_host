@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/ebeema_host/static/css/main.ef3479db.chunk.css",
+    "main.js": "/ebeema_host/static/js/main.1f07bcb2.chunk.js",
+    "main.js.map": "/ebeema_host/static/js/main.1f07bcb2.chunk.js.map",
+    "runtime-main.js": "/ebeema_host/static/js/runtime-main.19e26b5b.js",
+    "runtime-main.js.map": "/ebeema_host/static/js/runtime-main.19e26b5b.js.map",
+    "static/css/2.c5655f68.chunk.css": "/ebeema_host/static/css/2.c5655f68.chunk.css",
+    "static/js/2.9327d7e2.chunk.js": "/ebeema_host/static/js/2.9327d7e2.chunk.js",
+    "static/js/2.9327d7e2.chunk.js.map": "/ebeema_host/static/js/2.9327d7e2.chunk.js.map",
+    "index.html": "/ebeema_host/index.html",
+    "static/css/2.c5655f68.chunk.css.map": "/ebeema_host/static/css/2.c5655f68.chunk.css.map",
+    "static/css/main.ef3479db.chunk.css.map": "/ebeema_host/static/css/main.ef3479db.chunk.css.map",
+    "static/js/2.9327d7e2.chunk.js.LICENSE.txt": "/ebeema_host/static/js/2.9327d7e2.chunk.js.LICENSE.txt",
+    "static/media/antd.less": "/ebeema_host/static/media/antd.7affb7a1.less",
+    "static/media/Footer.css": "/ebeema_host/static/media/bg-img.ddd9a3e2.png",
+    "static/media/calculator.046a9d0c.svg": "/ebeema_host/static/media/calculator.046a9d0c.svg",
+    "static/media/contact.css": "/ebeema_host/static/media/contact_banner.add7477f.png",
+    "static/media/playbutton.27caf138.svg": "/ebeema_host/static/media/playbutton.27caf138.svg",
+    "static/media/Register.css": "/ebeema_host/static/media/welcome-bg.d3a46a43.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19e26b5b.js",
+    "static/css/2.c5655f68.chunk.css",
+    "static/js/2.9327d7e2.chunk.js",
+    "static/css/main.ef3479db.chunk.css",
+    "static/js/main.1f07bcb2.chunk.js"
+  ]
+}
