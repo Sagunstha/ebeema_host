@@ -1,0 +1,344 @@
+.top-navigation {
+  background: #fafafa;
+  padding: 20px 30px;
+}
+
+.filter-split {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+.filter-section {
+  width: 30%;
+}
+.table-section {
+  width: 70%;
+  margin: 0% 4% 0% 0%;
+}
+.filter-split > *:nth-child(1) {
+  flex: 1 1 20%;
+}
+.filter-split > *:nth-child(2) {
+  flex: 1 1 80%;
+}
+span.ant-checkbox-inner {
+  width: 10px;
+  height: 10px;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  width: 4px;
+  height: 7px;
+}
+.ant-checkbox + span {
+  font-size: 12px;
+}
+/* .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 0px;
+} */
+.ant-form label {
+  margin-top: 4px;
+}
+.filter-form {
+  background: #fff;
+  box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+  width: 95%;
+}
+.policy-filter {
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #3a6da7;
+  font-family: Karla, sans-serif;
+  background: #f0f0f0;
+  padding: 18px 15px;
+}
+.compare-list {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.compare-header-info {
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 10%);
+  display: flex;
+  height: 80px;
+  background: #fafafa;
+  align-items: center;
+}
+.sumassured-items {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.sumassured-items .sumassured-title {
+  background: #eaf0f9;
+  box-shadow: inset -1px 0 0 rgb(23 73 138 / 8%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 150px;
+  justify-content: center;
+}
+.sumassured-number-wrapper {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 150px);
+  padding: 0 10px;
+  height: 100%;
+}
+.sumassured-number-wrapper p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 47px;
+  text-align: center;
+  color: rgba(5, 12, 69, 0.8);
+  margin-bottom: 0;
+  letter-spacing: 10px;
+  /* margin-top: 20px; */
+}
+.term-items {
+  margin-left: auto;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.term-title {
+  background: #eaf0f9;
+  box-shadow: inset -1px 0 0 rgb(23 73 138 / 8%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 150px;
+  justify-content: center;
+}
+.term-number-wrapper {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 150px);
+  padding: 0 10px;
+  height: 100%;
+}
+.term-number-wrapper p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 47px;
+  text-align: center;
+  color: rgba(5, 12, 69, 0.8);
+  margin-bottom: 0;
+}
+.compare-search-sort {
+  display: flow-root;
+  background: #fff;
+  border: 0.5px solid #e0e0e0;
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: 35px;
+}
+.left-sort {
+  float: left;
+  margin: 0;
+  line-height: 33px;
+  cursor: inherit;
+  color: #616161;
+}
+.right-sort {
+  float: right;
+}
+.sort-down-arrow {
+  height: 8px;
+  opacity: 0.6;
+}
+.ant-select.sorting-dropdown.ant-select-single.ant-select-show-arrow {
+  float: right;
+}
+.ant-select.sorting-dropdown.ant-select-single.ant-select-show-arrow
+  .ant-select-selector {
+  margin: 0;
+}
+.img {
+  vertical-align: middle;
+}
+.sortChange {
+  color: #616161;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 33px;
+}
+/* .left-sort {
+} */
+.compare-plans {
+  margin-top: 5px;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid #f0f0f0;
+}
+.content-compare {
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+.table > tbody > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid rgb(28, 47, 34);
+}
+.line-rht-cmp {
+  background: #fff;
+  box-shadow: inset -0.5px 0 1px #616161;
+}
+.compare-parts {
+  overflow: hidden;
+  text-align: center;
+}
+td,
+th {
+  padding: 0;
+}
+.box-term-pay {
+  display: flex;
+  float: right;
+  font-size: 12px;
+  color: #3a6da7;
+}
+.benefits-button {
+  text-align: center;
+  padding: 7% 0;
+}
+.view-plan-button {
+  background: #3d538c;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.select-plan-button {
+  background: #ec3e26;
+  color: #ffff;
+  padding: 11px 28px;
+  border: 0;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.select-plan-button:hover {
+  background: #126afb;
+}
+
+.modal-viewplan {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.modal-logo {
+  height: 80px;
+  width: 250px;
+  object-fit: contain;
+}
+.company-invoice-wrapper {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+.invoice-company-name {
+  padding: 0px 15px;
+}
+.invoice-companyy-title {
+  background: #fafafa;
+  font-size: 15px;
+  padding: 20px;
+}
+.benefit-lists {
+  margin-top: 45px;
+  padding: 0px 10px;
+}
+
+.ant-modal.view-modal .ant-modal-content {
+  border-radius: 15px !important;
+  width: 150%;
+}
+.ant-modal.view-modal .ant-modal-content .ant-modal-header {
+  border-radius: 25px 25px 0 0;
+}
+
+button.ant-btn.ant-btn-primary.ant-btn-lg.view-modal-button {
+  float: right;
+}
+.fa-icon {
+  float: right;
+}
+.cross-fa {
+  color: #f03b67;
+}
+.fa-check-circle {
+  color: #17b443;
+  font-size: 14px;
+}
+
+/* .benefits-details {
+  width: 100%;
+  object-fit: contain;
+  height: 400px;
+} */
+.ant-select.ant-select-sm.dropdown-category.ant-select-single.ant-select-show-arrow
+  .ant-select-selector {
+  border: none !important;
+}
+.ant-form.ant-form-horizontal.ant-form-small.filter-form
+  .ant-row.ant-form-item {
+  margin-bottom: 0;
+}
+.ant-form-item-control-input-content .filter-subtitle {
+  color: #3a6da7;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1400px) {
+  .ant-modal.view-modal .ant-modal-content {
+    border-radius: 15px !important;
+    width: 100%;
+    right: -3%;
+  }
+  .modal-viewplan {
+    text-align: center;
+  }
+  .modal-logo {
+    height: 80px;
+    width: 250px;
+    object-fit: contain;
+  }
+  .company-invoice-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  .invoice-company-name {
+    padding: 0px 15px;
+  }
+  .invoice-companyy-title {
+    background: #fafafa;
+    font-size: 15px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1133px) {
+  .filter-split {
+    padding: 0;
+  }
+  .filter-section {
+    display: none;
+  }
+}
