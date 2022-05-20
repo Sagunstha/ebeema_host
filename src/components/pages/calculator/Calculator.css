@@ -24,8 +24,6 @@ form#dynamic_rule {
 .ant-modal.user-modal .ant-modal-content {
   border-radius: 15px !important;
   width: 130%;
-  top: 150px;
-  right: 100px;
 }
 .ant-modal.user-modal .ant-modal-content .ant-modal-header {
   background-color: #fafafa;
@@ -57,9 +55,9 @@ form#userInfo .ant-row.ant-form-item {
   font-size: 16px;
   color: #333;
 }
-.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.term-radio-button
-  .ant-radio-button.ant-radio-button-checked {
+.ant-radio-button.ant-radio-button-checked {
   background: #3d538c;
+  color: #fff !important;
 }
 .ant-space-item .ant-radio-button-wrapper.sum-radio-button span {
   font-style: normal;
@@ -74,14 +72,11 @@ form#userInfo .ant-row.ant-form-item {
   padding: 0 40px;
   background-color: #f5f5f5;
 }
-.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.sum-radio-button
-  .ant-radio-button.ant-radio-button-checked {
-  background: #3d538c;
-}
-.ant-radio-button-wrapper.ant-radio-button-wrapper-checked.sum-radio-button
-  .ant-radio-button.ant-radio-button-checked:focus {
+
+.ant-radio-button.ant-radio-button-checked:focus {
   outline: none !important;
   box-shadow: none;
+  color: #fff !important;
 }
 
 .select-category {

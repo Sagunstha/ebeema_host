@@ -19,6 +19,7 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllCategory } from "../redux/calculator/categoryAction";
+import { useLocation } from "react-router-dom";
 
 const Calculator = () => {
   const [info, setInfo] = useState("");
@@ -45,6 +46,7 @@ const Calculator = () => {
   const dispatch = useDispatch();
   const [dataProducts, setdataProducts] = useState([]);
   const products = useSelector((state) => state.allProducts.products);
+  const location = useLocation();
 
   const tooltipStyle = { marginLeft: 5, color: "#888", fontSize: "1em" };
 
@@ -59,6 +61,12 @@ const Calculator = () => {
   useEffect(() => {
     dispatch(fetchAllCategory()); //action import garera useeffet
   }, []);
+
+  useEffect(() => {
+    if (location.state) {
+      setInfo(location.state.info);
+    }
+  }, [location]);
 
   const validityCheck = (age, term, sum) => {
     if (age >= 0 && term && sum) {
@@ -309,6 +317,7 @@ const Calculator = () => {
                 <Select
                   className="dropdown-category"
                   placeholder="Select Category"
+                  value={info}
                   onChange={(value, index) => {
                     handleChangeCategory(value, index);
                     onChange();

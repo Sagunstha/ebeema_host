@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import playbutton from "../SvgIcons/playbutton.svg";
 import calculatorIcon from "../SvgIcons/calculator.svg";
 import HomeData from "./HomeData.js";
+import { useNavigate } from "react-router-dom";
+
 import { Carousel } from "antd";
 import {
   HomeDataPolicy,
@@ -11,10 +13,35 @@ import {
   howWorkData,
   testimonialData,
 } from "./HomeData.js";
-import { Modal } from "antd";
+import { Modal, Select } from "antd";
+import { fetchAllCategory } from "../redux/calculator/categoryAction";
+import { useDispatch, useSelector } from "react-redux";
+
 function Home() {
   const [youtubeVisible, setYoutubeVisible] = useState(false);
   const [slideNO, setSlideNo] = useState(3);
+  const navigate = useNavigate();
+
+  const [info, setInfo] = useState("");
+  const dispatch = useDispatch();
+  const [dataProducts, setdataProducts] = useState([]);
+  const products = useSelector((state) => state.allProducts.products);
+  const { Option } = Select;
+
+  useEffect(() => {
+    if (products?.data) {
+      setdataProducts(products?.data?.catagories);
+      // console.log("products", products);
+    }
+  }, [products]);
+
+  useEffect(() => {
+    dispatch(fetchAllCategory());
+  }, []);
+
+  const handleChangeCategory = (value, index) => {
+    setInfo(value);
+  };
 
   // console.log("slideNO", slideNO);
   const showYoutubeModal = () => {
@@ -41,6 +68,12 @@ function Home() {
       }
     });
   });
+
+  const gotoNextPage = () => {
+    navigate("/calculator", {
+      state: { info },
+    });
+  };
 
   const contentStyle = {
     height: "160px",
@@ -126,77 +159,27 @@ function Home() {
                   method="get"
                   action="#"
                 >
-                  <select className="insurance-lists">
-                    <option value="" selected="selected">
-                      Select a insurance type
-                    </option>
-                    <option
-                      data-min-age="11"
-                      data-max-age="70"
-                      data-child-age=""
-                      value="endowment"
+                  <div>
+                    <Select
+                      // size="large"
+                      className="home-dropdown-category"
+                      placeholder="Select Category"
+                      onChange={(value, index) => {
+                        handleChangeCategory(value, index);
+                      }}
                     >
-                      Endowment/Investment
-                    </option>
+                      {dataProducts?.map((data, index) => (
+                        <Option key={index} value={data.category_code}>
+                          {data.name}
+                        </Option>
+                      ))}
+                    </Select>
+                  </div>
 
-                    <option
-                      data-min-age="11"
-                      data-max-age="65"
-                      data-child-age=""
-                      value="money-back"
-                    >
-                      Money-back
-                    </option>
-
-                    <option
-                      data-min-age="18"
-                      data-max-age="60"
-                      data-child-age="0-17"
-                      value="children"
-                    >
-                      Child
-                    </option>
-
-                    <option
-                      data-min-age="16"
-                      data-max-age="65"
-                      data-child-age=""
-                      value="whole-life"
-                    >
-                      Whole-life
-                    </option>
-
-                    <option
-                      data-min-age="18"
-                      data-max-age="60"
-                      data-child-age=""
-                      value="couple"
-                    >
-                      Couple
-                    </option>
-
-                    <option
-                      data-min-age="20"
-                      data-max-age="60"
-                      data-child-age=""
-                      value="retirement-pension"
-                    >
-                      Retirement/ Pension
-                    </option>
-
-                    <option
-                      data-min-age="11"
-                      data-max-age="70"
-                      data-child-age=""
-                      value="term"
-                    >
-                      Term Life
-                    </option>
-                  </select>
-                  <Link to="/calculator" className="insurance-type-submit">
+                  <a onClick={gotoNextPage} className="insurance-type-submit">
                     <p> Compare</p>
                     <img src={calculatorIcon} alt="compare calculator" />
-                  </Link>
+                  </a>
                 </form>
               </div>
             </div>
